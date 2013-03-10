@@ -1,13 +1,22 @@
 (defvar root-dir (file-name-directory load-file-name))
 (defvar config-dir (concat root-dir "config/"))
+(defvar sparql-mode-dir (concat root-dir "vendor/sparql-mode"))
+
 (setq custom-file (concat config-dir "custom.el"))
+
 (add-to-list 'load-path config-dir)
+(add-to-list 'load-path sparql-mode-dir)
 
 (require 'packages)
 (require 'gui)
 (require 'defuns)
-;;;;;;;;;;;;;;;;;
-;; Backup stuff;;
+(require 'plugins)
+(require 'bindings)
+
+(when (eq system-type 'darwin)
+  (require 'osx))
+
+;; Backup stuff
 (setq make-backup-files t)
 (setq version-control t)
 
@@ -16,8 +25,4 @@
 
 (setq delete-old-versions t)
 
-(when (eq system-type 'darwin)
-  (require 'osx))
 
-(require 'undo-tree)
-(require 'bindings)

@@ -5,13 +5,14 @@
 
 ;; Marmalade
 (add-to-list 'package-archives 
-    '("marmalade" . "http://marmalade-repo.org/packages/"))
+	     '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 ;; Melpa
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 (package-initialize)
+
 ; Fix for melpa
 (setq url-http-attempt-keepalives nil)
 
