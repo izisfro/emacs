@@ -20,7 +20,7 @@
   '(molokai-theme monokai-theme
 		  auto-complete exec-path-from-shell smex
 		  ido-ubiquitous undo-tree
-		  n3-mode php-mode scala-mode2))
+		  n3-mode php-mode scala-mode2 ))
 
 ;;Check if packages are installed
 (defun packages-installed-p ()

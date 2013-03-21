@@ -5,6 +5,8 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
+(require 'quack)
+
 ;;;;;;;;;;;;;;
 ;;Load modes;;
 ;;;;;;;;;;;;;;
@@ -28,5 +30,11 @@
 	'("\\.ttl" . n3-mode))
        auto-mode-alist))
 
+(autoload 'paredit-mode "paredit" "Minor mode for pseudo-structurally editing Lisp code" t)
+
+;; Autoload paredit in scheme mode
+(dolist (h '(scheme-mode-hook
+             inferior-scheme-mode-hook))
+  (add-hook h (lambda () (paredit-mode 1))))
 
 (provide 'plugins)
