@@ -9,6 +9,8 @@
 (add-to-list 'load-path sparql-mode-dir)
 (add-to-list 'load-path vendor-dir)
 
+(setq scheme-program-name "plt-r5rs")
+
 
 (require 'packages)
 (require 'gui)
