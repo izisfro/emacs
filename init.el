@@ -1,16 +1,16 @@
 (defvar root-dir (file-name-directory load-file-name))
 (defvar config-dir (concat root-dir "config/"))
 (defvar vendor-dir (concat root-dir "vendor/"))
-(defvar sparql-mode-dir (concat root-dir "vendor/sparql-mode"))
 
 (setq custom-file (concat config-dir "custom.el"))
 
 (add-to-list 'load-path config-dir)
-(add-to-list 'load-path sparql-mode-dir)
 (add-to-list 'load-path vendor-dir)
 
-(setq scheme-program-name "plt-r5rs")
-
+(require 'gnutls)
+  (add-to-list 'gnutls-trustfiles
+               (expand-file-name
+                "~/etc/tls/certificates/comodo.rsa.ca.intermediate.crt"))
 
 (require 'packages)
 (require 'gui)

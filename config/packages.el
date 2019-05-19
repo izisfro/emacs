@@ -17,10 +17,10 @@
 (setq url-http-attempt-keepalives nil)
 
 (defvar my-packages
-  '(molokai-theme monokai-theme
+  '(monokai-pro-theme molokai-theme
 		  auto-complete exec-path-from-shell smex
 		  ido-ubiquitous undo-tree
-		  n3-mode php-mode scala-mode2 ))
+		  php-mode ))
 
 ;;Check if packages are installed
 (defun packages-installed-p ()

@@ -14,7 +14,7 @@
 (set-face-attribute 'default nil :height 140)
 
 ;;Color theme
-(load-theme 'molokai t)
+(load-theme 'monokai-pro t)
 
 ;;Disable toolbar
 (tool-bar-mode -1)
