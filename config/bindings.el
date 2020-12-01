@@ -3,6 +3,7 @@
 (global-set-key (kbd "M-p") 'backward-paragraph)
 (global-set-key (kbd "C-c c") 'shell-command)
 (global-set-key (kbd "C-u") 'undo-only)
+(global-set-key (kbd "M-v") 'clipboard-yank)
 
 ;;; for defuns
 (define-key global-map (kbd "C-o") 'add-line-below)
