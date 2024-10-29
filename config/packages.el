@@ -3,13 +3,9 @@
 ;;common lisp
 (require 'cl)
 
-;; Marmalade
-(add-to-list 'package-archives 
-	     '("marmalade" . "http://marmalade-repo.org/packages/"))
-
 ;; Melpa
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
+	     '("melpa" . "https://melpa.org/packages/") t)
 
 (package-initialize)
 
@@ -19,7 +15,7 @@
 (defvar my-packages
   '(monokai-pro-theme molokai-theme
 		  auto-complete exec-path-from-shell smex
-		  ido-ubiquitous undo-tree
+		   undo-tree
 		  php-mode ))
 
 ;;Check if packages are installed
